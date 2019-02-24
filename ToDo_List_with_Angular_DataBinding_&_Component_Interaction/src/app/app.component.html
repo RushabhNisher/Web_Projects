@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div id="myDIV" class="header">
+    <div class="content">
+        <nav><span class="nav_Bar"><strong>CODE GEASS</strong></span><span class="nav_Bar"><strong> USER 2</strong></span><span class="nav_Bar"><strong>USER 3</strong></span></nav>
+    <h1 style="margin:5px">To Do List</h1>
+    <input type="text" [(ngModel)]="author" id="author" placeholder="Name of Author..." maxlength="40">
+
+    <input type="text" [(ngModel)]="listTitle" id="myInput" placeholder="Title..." maxlength="180">
+    <input type="text" [(ngModel)]="todoItems" id="Caption" placeholder="Add a thing to your list" maxlength="40">
+    <input type="date" [(ngModel)]="date"id="date" placeholder="Add date" maxlength="15">
+    <span id="btnAddElement" (click)="onClickMe()" class="addBtn"><strong>Add!</strong></span> <!--onclick="newElement()"-->
+
+
+  </div> <!--Content-->
+
+  </div>
+  <!--<div class="nav_Bar">
+    <h2 style="background-color:#ffd11a;" >CODE GEASS</h2>
+  </div>-->
+  <div id="ULDiv">
+  <ul id="myUL">
+      <li *ngFor="let todo of todos" class="cardLayout card">
+          <span><b>Title: </b></span>&nbsp;<span class="title">{{todo.title}}</span>&nbsp;
+          <span><b>Todo Item: </b></span>&nbsp;<span class="description">{{todo.todoitem}}</span>&nbsp;
+          <span><b>Author: </b></span>&nbsp;<span class="author">{{todo.author}}</span>&nbsp;
+          <span><b>Date: </b></span>&nbsp;<span class="Date">{{todo.date}}</span>&nbsp;
+        </li>
+  </ul>
+  </div>
+  <!--<script src="APP.JS"></script>-->
+
+
+
+  <router-outlet></router-outlet>

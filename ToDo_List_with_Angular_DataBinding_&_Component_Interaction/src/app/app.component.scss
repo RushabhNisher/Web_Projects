@@ -1,0 +1,172 @@
+$color_1: black;
+$color_2: #555;
+$color_3: #1a75ff;
+$color_4: rgba(255, 255, 255, 0.815);
+$font_family_1: 'Courier New', Courier, monospace;
+$background_color_1: #fff7e6;
+$background_color_2: #e69900;
+$background_color_3: #bbb;
+$background_color_4: #f44336;
+$border_color_1: #1a75ff;
+
+/* Include the padding and border in an element's total width and height */
+/* Style the header */
+/* Clear floats after the header */
+/* Style the input */
+/* Style the "Add" button */
+/* Remove margins and padding from the list */
+/* Style the list items */
+/* Set all odd list items to a different color (zebra-stripes) */
+/* Darker background-color on hover */
+/* When clicked on, add a background color and strike out text */
+/* Add a "checked" mark when clicked on */
+/* Style the close button */
+/*
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+  .content {
+    padding: 16px;
+  }*/
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	min-width: 50px;
+	border-style: solid;
+	background-color: $background_color_1;
+}
+.header {
+	background-color: $background_color_2;
+	padding: 30px 40px;
+	color: $color_1;
+	text-align: center;
+	font-family: $font_family_1;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+input {
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	width: 75%;
+	padding: 10px;
+	float: left;
+	font-size: 16px;
+	font-family: $font_family_1;
+}
+.addBtn {
+	padding: 10px;
+	width: 25%;
+	background: #d9d9d9;
+	color: $color_2;
+	float: left;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s;
+	border-radius: 0;
+	font-family: $font_family_1;
+	&:hover {
+		background-color: $background_color_3;
+	}
+}
+ul {
+	margin: 0;
+	padding: 10px;
+	li {
+		cursor: pointer;
+		position: relative;
+		padding: 15px 10px 15px 30px;
+		list-style-type: none;
+		background: #ffe6b3;
+		font-size: 20px;
+		transition: 1s;
+		font-family: $font_family_1;
+		overflow-wrap: break-word;
+		&:nth-child(odd) {
+			background: #ffd480;
+		}
+		&:hover {
+			background: #ffa64d;
+		}
+	}
+	li.checked {
+		background: #fff2e6;
+		color: $color_3;
+		text-decoration: line-through;
+		&::before {
+			content: '';
+			position: absolute;
+			border-color: $border_color_1;
+			border-style: solid;
+			border-width: 0 2px 3px 0;
+			top: 15px;
+			left: 16px;
+			transform: rotate(45deg);
+			height: 16px;
+			width: 8px;
+		}
+	}
+}
+.close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 15px 16px 15px 16px;
+	&:hover {
+		background-color: $background_color_4;
+		color: $color_4;
+	}
+}
+.Date {
+	position: absolute;
+//	left: 41%;
+	font-size: 20px;
+	transition: 1s;
+	font-family: $font_family_1;
+}
+.CAPTION {
+	position: absolute;
+	left: 15%;
+	bottom: 28%;
+	font-size: 20px;
+	transition: 1s;
+	font-family: $font_family_1;
+	overflow-wrap: break-word;
+	width: 12%;
+	padding-top: 20px;
+}
+.AUTHOR {
+	position: absolute;
+	left: 30%;
+	font-size: 20px;
+	transition: 1s;
+	font-family: $font_family_1;
+	overflow-wrap: break-word;
+	width: 12%;
+  padding-bottom: 20px;
+}
+.nav_Bar {
+  padding: 10px;
+ // position: relative;
+	width: 25%;
+	background: #d9d9d9;
+	color: $color_2;
+  float: left;
+	cursor: pointer;
+	&:hover {
+		background-color: $background_color_4;
+	}
+}
