@@ -1,0 +1,190 @@
+/* Include the padding and border in an element's total width and height */
+
+* {
+  box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-width: 50px;
+    border-style: solid;
+    background-color: #fff7e6;
+  }
+
+  /* Style the header */
+  .header {
+    background-color: #e69900;
+    padding: 30px 40px;
+    color: black;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    
+
+  }
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+
+  }
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  font-family:'Courier New', Courier, monospace;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  /*display: inline-block;*/
+  font-family:'Courier New', Courier, monospace;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+   
+  /* Remove margins and padding from the list */
+  ul {
+    margin: 0;
+    padding: 10px;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 15px 10px 15px 30px;
+    list-style-type: none;
+    background:#ffe6b3;
+    font-size: 20px;
+    transition: 1s;
+    font-family:'Courier New', Courier, monospace;
+    overflow-wrap: break-word;
+    
+    /*  make the list items unselectable 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;*/
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #ffd480;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ffa64d;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #fff2e6;
+    color: #1a75ff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #1a75ff;
+    border-style: solid;
+    border-width: 0 2px 3px 0;
+    top: 15px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 16px;
+    width: 8px;
+    
+  }
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px 16px 15px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: rgba(255, 255, 255, 0.815);
+  }
+  .Date{
+    position: absolute;
+    left: 41%;
+    /*padding: 17px 16px 15px 410px;*/
+    font-size: 20px;
+    transition: 1s;
+    font-family:'Courier New', Courier, monospace;
+    
+  }
+  .CAPTION{
+    position: absolute;
+    left: 15%;
+    bottom: 28%;
+    /*padding: 27px 16px 15px 16px;*/
+    font-size: 20px;
+    transition: 1s;
+    font-family:'Courier New', Courier, monospace;
+    overflow-wrap: break-word;
+    width: 12%;
+    padding-top: 20px;
+    
+  }
+  .AUTHOR{
+    position: absolute;
+    left:30% ;
+    /*padding: 17px 16px 15px 16px;*/
+    font-size: 20px;
+    transition: 1s;
+    font-family:'Courier New', Courier, monospace;
+    overflow-wrap: break-word;
+    width: 12%;
+    padding-bottom: 20px;
+  }
+  .nav_Bar{
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    cursor: pointer
+  }
+  .nav_Bar:hover{
+    background-color: #f44336;
+  }
+  /*
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+  .content {
+    padding: 16px;
+  }*/
